@@ -12,7 +12,6 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import "./App.css";
-import TaskList from "./TaskList";
 import TaskForm from "./TaskForm";
 
 export type Task = {
@@ -100,7 +99,7 @@ type TaskListProps = {
   tasks: Task[];
 };
 
-const TaskListCustom: React.FC<TaskListProps> = ({ tasks }) => (
+const TaskListCustom = ({ tasks }: TaskListProps) => (
   <Box>
     <Box display="flex" flexWrap="wrap" gap={2}>
       {tasks.map((task) => (
